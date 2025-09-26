@@ -233,3 +233,31 @@ body {
 .memory-img-item img {
     width: auto;
 }
+
+/* Responsive cho memory-list */
+@media (max-width: 600px) {
+  .memory-list {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .memory-list li {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start;
+  }
+  .memory-img-item {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin-top: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .memory-slide h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
