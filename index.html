@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keep my heart 💖</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>❤️</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="heart">💖</div>
+    <div class="confess-box">
+        <h1>Hi em béeeeee của anhhh !</h1>
+        <p>
+            Hãy nhập tên của bé để anh biết đó là em nha 💌
+        </p>
+        <div class="input-row">
+            <input type="text" id="nameInput" class="name-input" placeholder="Nhập tên ở đây nè...">
+            <button class="btn-love" onclick="checkName()">OK</button>
+        </div>
+    </div>
+    <!-- Vùng kỷ niệm, tin nhắn, ảnh -->
+    <div id="memory-box" class="memory-box" style="display:none;">
+        <div class="memory-slide" id="memory-slide-0" >
+            <h2>🌸 Kỷ niệm đầu tiên của chúng ta 🌸</h2>
+            <ul class="memory-list">
+                <li style="text-align: left;">
+                    Sau cú "matching" định mệnh, anh đã không để lỡ bất cứ giây phút nào! Anh chủ động gửi tin nhắn đầu tiên, với sự hồi hộp và tò mò 🥰 Từ đó, câu chuyện của chúng ta đã được viết nên!<br>
+                    <img src="images/01-hello.jpeg" alt="Matching lần đầu" class="memory-img-item" />
+                </li>
+                <li style="text-align: left; display: flex; flex-direction: column;">
+                    <span>Và rồi, chúng ta bắt đầu những tin nhắn làm quen đầu tiên. 💌Sự hồi hộp nhanh chóng được thay thế bằng cảm giác ấm áp khi anh dần nhận ra sự dễ thương, trong trẻo và chân thành trong mỗi lời em nói.</span>
+                    <img src="images/01-contact.jpeg" alt="Nhắn tin nói chuyện" class="memory-img-item"
+                    style="width: fit-content;" />
+                </li>
+                <li style="text-align: left; display: flex; flex-direction: column;">
+                    Từ những tin nhắn ngọt ngào, cuối cùng cũng đến lúc gặp em ngoài đời thực! Anh còn nhớ rõ cảm giác trái tim đập loạn nhịp 💓 khi nhìn thấy em, như thể mọi thứ bỗng nhiên sống động và chân thật hơn rất nhiều.<br>
+                    <img src="images/01-firstmeet.jpeg" alt="Gặp mặt trực tiếp" class="memory-img-item" 
+                    style="width: fit-content;"/>
+                </li>
+            </ul>
+        </div>
+        <div class="memory-slide" id="memory-slide-1" style="display:none;">
+            <h2>📸 Kỉ niệm những lần đi cùng nhau</h2>
+            <ul class="memory-list">
+                <li>
+                    <span><strong>Buổi cà phê đầu tiên ấy</strong>, anh vẫn nhớ rõ cảm giác ngượng nghịu ban đầu 🥺... Nhưng may mắn là em đã luôn nhẹ nhàng mở lời, khơi gợi nên những câu chuyện để không khí trở nên thân mật và ấm áp hơn rất nhiều. 💖</span>
+                </li>
+                <li>
+                    <span><strong>Đến buổi cà phê thứ hai</strong> thì mọi thứ đã khác hẳn rồi nhỉ! 😊 Lớp ngượng ngùng ban đầu đã tan biến như sương sớm, nhường chỗ cho những câu chuyện cởi mở và thân mật hơn. Anh thấy vui vì chúng ta đã thoải mái chia sẻ về thói quen, cuộc sống hàng ngày, và những điều nhỏ nhặt... Cứ như thế này, chúng ta sẽ hiểu nhau hơn rất nhiều! 🥰</span>
+                </li>
+                <li>
+                    <span><strong>Cứ thế, buổi cà phê thứ ba, thứ tư, rồi thứ năm cũng đến!</strong> 💖 Giờ đây, những cuộc gặp gỡ không còn là "lần đầu" ngại ngùng nữa, mà đã trở thành những buổi hẹn vô cùng thoải mái và thân thuộc. Chúng ta đã cùng ngồi lại, cười vang với những niềm vui trong cuộc sống thường ngày 😄, và cũng nhẹ nhàng lắng nghe những tâm sự sâu kín của nhau. Cảm giác được chia sẻ mọi điều với em thật sự rất đặc biệt và ý nghĩa. </span>
+                </li>
+            </ul>
+        </div>
+        <div class="memory-slide" id="memory-slide-2" style="display:none;">
+            <h2>💬 Tổng kết câu chuyện của chúng ta</h2>
+            <div class="memory-message" style="display: flex; flex-direction: column;">
+                <p>
+                    Anh luôn trân quý từng khoảnh khắc có em ở bên. ✨ Cảm ơn em đã đến, cùng anh vẽ nên những kỷ niệm thật đẹp và ý nghĩa qua những buổi cà phê thân thương. Anh mong rằng, hành trình tuyệt vời của chúng ta sẽ còn tiếp diễn mãi về sau. 💖 em!
+                </p>
+                <button id="go-movie-btn" class="btn-love" style="margin-top: 2rem; text-align: center;">Nhân đây thì đi xem phim cùng anh nhé? 🎬🍿</button>
+            </div>
+        </div>
+        <div class="memory-nav">
+            <button id="prev-memory" class="btn-love memory-btn" title="Trước">
+                <span class="arrow-icon">&#8592;</span>
+            </button>
+            <button id="next-memory" class="btn-love memory-btn" title="Tiếp">
+                <span class="arrow-icon">&#8594;</span>
+            </button>
+        </div>
+    </div>
+    <div id="movie-box" class="memory-box" style="display:none;">
+        <h2>🎬 Lời mời đặc biệt</h2>
+        <p style="font-size:1.15rem; color:#e75480;">
+            Anh biết chúng ta đã có những buổi cà phê tuyệt vời, nhưng anh muốn một buổi hẹn kịch tính hơn! 😊 Tối mai, đi xem phim cùng anh nhé? Đảm bảo sẽ rất vui!<br>
+            Nếu câu trả lời là "Dạ bé đi", thì anh sẽ đặt vé ngay đây!🥰<br>
+            <span style="font-size:2rem;">💌💑🍿</span>
+        </p>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="modal-close" class="modal-close">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
